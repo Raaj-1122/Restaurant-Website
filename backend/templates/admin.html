@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- ADMIN NAVBAR -->
+
+<nav>
+
+    <div class="logo">
+        🍽 Admin Dashboard
+    </div>
+
+    <ul>
+        <li><a href="/admin">Reservations</a></li>
+        <li><a href="/food-management">Food Items</a></li>
+        <li><a href="/orders">Orders</a></li>
+        <li><a href="/logout">Logout</a></li>
+    </ul>
+
+</nav>
+
+<!-- DASHBOARD HEADER -->
+
+<section class="dashboard-header">
+
+    <h1>Restaurant Management Dashboard</h1>
+
+    <p>
+        Manage reservations, menu items and restaurant operations.
+    </p>
+
+</section>
+
+<!-- STATISTICS -->
+
+<section class="dashboard-stats">
+
+    <div class="dashboard-card">
+
+        <h2>{{ reservations|length }}</h2>
+
+        <p>Total Reservations</p>
+
+    </div>
+
+    <div class="dashboard-card">
+
+        <h2>15+</h2>
+
+        <p>Food Items</p>
+
+    </div>
+
+    <div class="dashboard-card">
+
+        <h2>4.8★</h2>
+
+        <p>Customer Rating</p>
+
+    </div>
+
+    <div class="dashboard-card">
+
+        <h2>500+</h2>
+
+        <p>Happy Customers</p>
+
+    </div>
+
+</section>
+
+<!-- RESERVATION TABLE -->
+
+<section class="dashboard-table-section">
+
+    <h2>Reservation Records</h2>
+
+    <div class="table-container">
+
+        <table class="admin-table">
+
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Action</th>
+            </tr>
+
+            {% for row in reservations %}
+
+            <tr>
+
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+                <td>{{ row[5] }}</td>
+
+                <td>
+
+                    <a href="/delete/{{ row[0] }}"
+                       class="delete-btn"
+                       onclick="return confirm('Delete this reservation?')">
+
+                        Delete
+
+                    </a>
+
+                </td>
+
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+            <h3>Admin Panel</h3>
+            <p>Tasty Bites Restaurant Management System</p>
+        </div>
+
+        <div>
+            <h3>Status</h3>
+            <p>System Active</p>
+        </div>
+
+        <div>
+            <h3>Version</h3>
+            <p>v2.0</p>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+        © 2026 Tasty Bites Restaurant
+    </p>
+
+</footer>
+
+</body>
+</html>

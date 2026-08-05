@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve a Table - Tasty Bites</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo">
+        🍽 Tasty Bites
+    </div>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/menu">Menu</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/reservation">Reservation</a></li>
+        <li><a href="/admin-login">Admin</a></li>
+    </ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="reservation-hero">
+
+    <div class="reservation-overlay">
+
+        <div class="reservation-info">
+
+            <h1>Reserve Your Table</h1>
+
+            <p>
+                Experience unforgettable dining with
+                authentic Indian cuisine and premium hospitality.
+            </p>
+
+            <div class="booking-features">
+
+                <div>✅ Instant Booking</div>
+                <div>✅ Premium Dining</div>
+                <div>✅ Family Friendly</div>
+                <div>✅ Air Conditioned</div>
+
+            </div>
+
+        </div>
+
+        <div class="reservation-box">
+
+            <h2>Book Now</h2>
+
+            {% if success %}
+
+            <div class="success-message">
+                🎉 Your table has been reserved successfully!
+            </div>
+
+            {% endif %}
+
+            <form method="POST" class="reservation-form">
+
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Full Name"
+                    required>
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                    required>
+
+                <input
+                    type="text"
+                    name="phone"
+                    placeholder="Phone Number"
+                    required>
+
+                <input
+                    type="date"
+                    name="date"
+                    required>
+
+                <input
+                    type="time"
+                    name="time"
+                    required>
+
+                <button type="submit">
+                    Reserve Table
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BOOKING STEPS -->
+
+<section class="steps-section">
+
+    <h2>Easy Reservation Process</h2>
+
+    <div class="steps-grid">
+
+        <div class="step-card">
+            <h3>1️⃣ Fill Details</h3>
+            <p>Enter your booking information.</p>
+        </div>
+
+        <div class="step-card">
+            <h3>2️⃣ Confirm Booking</h3>
+            <p>Submit your reservation request.</p>
+        </div>
+
+        <div class="step-card">
+            <h3>3️⃣ Enjoy Dining</h3>
+            <p>Visit and enjoy your experience.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+            <h3>Tasty Bites</h3>
+            <p>Serving happiness one plate at a time.</p>
+        </div>
+
+        <div>
+            <h3>Contact</h3>
+            <p>📞 +91 9876543210</p>
+            <p>✉ info@tastybites.com</p>
+        </div>
+
+        <div>
+            <h3>Address</h3>
+            <p>Greater Noida, Uttar Pradesh</p>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+        © 2026 Tasty Bites Restaurant. All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>

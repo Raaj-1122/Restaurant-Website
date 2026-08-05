@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Tasty Bites</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo">
+        🍽 Tasty Bites
+    </div>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/menu">Menu</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/reservation">Reservation</a></li>
+        <li><a href="/admin-login">Admin</a></li>
+    </ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="contact-hero">
+
+    <div class="contact-hero-content">
+
+        <h1>Contact Us</h1>
+
+        <p>
+            We'd love to hear from you. Reach out anytime.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- CONTACT CARDS -->
+
+<section class="contact-info">
+
+    <div class="contact-card">
+        📍
+        <h3>Address</h3>
+        <p>Greater Noida, Uttar Pradesh, India</p>
+    </div>
+
+    <div class="contact-card">
+        📞
+        <h3>Phone</h3>
+        <p>+91 9876543210</p>
+    </div>
+
+    <div class="contact-card">
+        ✉️
+        <h3>Email</h3>
+        <p>info@tastybites.com</p>
+    </div>
+
+</section>
+
+<!-- CONTACT FORM -->
+
+<section class="contact-section">
+
+    <div class="contact-form-box">
+
+        <h2>Send Us A Message</h2>
+
+        <form class="contact-form">
+
+            <input
+                type="text"
+                placeholder="Your Name"
+                required>
+
+            <input
+                type="email"
+                placeholder="Your Email"
+                required>
+
+            <input
+                type="text"
+                placeholder="Subject"
+                required>
+
+            <textarea
+                placeholder="Write your message..."
+                required></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- BUSINESS HOURS -->
+
+<section class="hours-section">
+
+    <h2>Opening Hours</h2>
+
+    <div class="hours-box">
+
+        <p>Monday - Friday : 10:00 AM - 11:00 PM</p>
+
+        <p>Saturday : 09:00 AM - 12:00 AM</p>
+
+        <p>Sunday : 09:00 AM - 12:00 AM</p>
+
+    </div>
+
+</section>
+
+<!-- MAP -->
+
+<section class="map-section">
+
+    <h2>Find Us</h2>
+
+    <div class="map-box">
+
+        <iframe
+            src="https://maps.google.com/maps?q=greater%20noida&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+            <h3>Tasty Bites</h3>
+            <p>Serving happiness one plate at a time.</p>
+        </div>
+
+        <div>
+            <h3>Contact</h3>
+            <p>📞 +91 9876543210</p>
+            <p>✉ info@tastybites.com</p>
+        </div>
+
+        <div>
+            <h3>Address</h3>
+            <p>Greater Noida, Uttar Pradesh</p>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+        © 2026 Tasty Bites Restaurant. All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>

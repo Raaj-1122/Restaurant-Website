@@ -1,0 +1,1436 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f8f9fa;
+    color:#333;
+}
+
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 60px;
+
+    background:rgba(0,0,0,0.85);
+
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    color:#ff9800;
+    font-size:30px;
+    font-weight:bold;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:17px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#ff9800;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+    ),
+    url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    padding:100px 20px;
+}
+
+.hero-content{
+    color:white;
+    max-width:800px;
+}
+
+.hero-content h1{
+    font-size:65px;
+    margin-bottom:20px;
+    line-height:1.2;
+}
+
+.hero-content p{
+    font-size:22px;
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn-primary,
+.btn-secondary{
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.btn-primary{
+    background:#ff9800;
+    color:white;
+}
+
+.btn-primary:hover{
+    background:#e68900;
+    transform:translateY(-3px);
+}
+
+.btn-secondary{
+    background:white;
+    color:#333;
+}
+
+.btn-secondary:hover{
+    transform:translateY(-3px);
+}
+
+/* STATS */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+
+    padding:70px 80px;
+    background:white;
+}
+
+.stat-box{
+    text-align:center;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.stat-box h2{
+    color:#ff9800;
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+/* FEATURED */
+
+.featured{
+    padding:90px 50px;
+    text-align:center;
+}
+
+.featured h1{
+    font-size:42px;
+    margin-bottom:50px;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.card{
+    width:340px;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 20px rgba(0,0,0,0.15);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin:15px 0;
+    font-size:24px;
+}
+
+.card p{
+    padding:0 20px 20px;
+}
+
+/* WHY US */
+
+.why-us{
+    background:#fff;
+    padding:90px 50px;
+    text-align:center;
+}
+
+.why-us h1{
+    margin-bottom:50px;
+}
+
+.features{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+}
+
+.feature{
+    width:320px;
+    padding:30px;
+    border-radius:15px;
+    background:#f8f9fa;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    font-size:20px;
+}
+
+.feature h3{
+    margin:15px 0;
+}
+
+/* TESTIMONIALS */
+
+.testimonials{
+    padding:90px 50px;
+    background:#f4f4f4;
+    text-align:center;
+}
+
+.testimonials h1{
+    margin-bottom:50px;
+}
+
+.testimonial-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+}
+
+.testimonial{
+    width:320px;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.testimonial p{
+    margin-bottom:15px;
+    font-style:italic;
+}
+
+/* CTA */
+
+.cta{
+    text-align:center;
+    padding:100px 20px;
+    background:#ff9800;
+    color:white;
+}
+
+.cta h1{
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.cta p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+/* PAGE SECTION */
+
+.page-section{
+    padding:130px 50px 80px;
+    text-align:center;
+}
+
+.page-section h1{
+    margin-bottom:30px;
+}
+
+/* FORMS */
+
+.reservation-form{
+    width:450px;
+    max-width:95%;
+    margin:auto;
+
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.reservation-form input{
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+.reservation-form button{
+    background:#ff9800;
+    color:white;
+    border:none;
+    padding:14px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.reservation-form button:hover{
+    background:#e68900;
+}
+
+/* SUCCESS */
+
+.success-message{
+    width:450px;
+    max-width:95%;
+    margin:20px auto;
+    padding:15px;
+    background:#d4edda;
+    color:#155724;
+    border-radius:8px;
+}
+
+/* ERROR */
+
+.error-message{
+    width:450px;
+    max-width:95%;
+    margin:20px auto;
+    padding:15px;
+    background:#f8d7da;
+    color:#721c24;
+    border-radius:8px;
+}
+
+/* TABLES */
+
+.admin-table{
+    width:95%;
+    margin:auto;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.admin-table th,
+.admin-table td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:center;
+}
+
+.admin-table th{
+    background:#ff9800;
+    color:white;
+}
+
+.admin-table tr:nth-child(even){
+    background:#f9f9f9;
+}
+
+/* DELETE BUTTON */
+
+.delete-btn{
+    background:#dc3545;
+    color:white;
+    padding:8px 15px;
+    border-radius:5px;
+    text-decoration:none;
+}
+
+.delete-btn:hover{
+    background:#b02a37;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:white;
+    padding:50px 20px 20px;
+}
+
+.footer-content{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    gap:30px;
+    margin-bottom:20px;
+}
+
+.footer-content h3{
+    margin-bottom:10px;
+    color:#ff9800;
+}
+
+footer hr{
+    border:none;
+    height:1px;
+    background:#444;
+    margin:20px 0;
+}
+
+.copyright{
+    text-align:center;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+        padding:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero-content h1{
+        font-size:40px;
+    }
+
+    .hero-content p{
+        font-size:18px;
+    }
+
+    .stats{
+        padding:50px 20px;
+    }
+
+    .featured,
+    .why-us,
+    .testimonials{
+        padding:60px 20px;
+    }
+
+    .cta h1{
+        font-size:30px;
+    }
+
+    .admin-table{
+        font-size:13px;
+    }
+}
+
+
+/* MENU PAGE */
+
+.menu-hero{
+    height:50vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+    ),
+    url("https://images.unsplash.com/photo-1555396273-367ea4eb4db5");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    color:white;
+}
+
+.menu-hero-content h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.menu-hero-content p{
+    font-size:20px;
+}
+
+.menu-section{
+    padding:80px 50px;
+    text-align:center;
+}
+
+.menu-section h2{
+    font-size:40px;
+    margin-bottom:50px;
+}
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+}
+
+.food-card{
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.12);
+
+    transition:0.4s;
+}
+
+.food-card:hover{
+    transform:translateY(-10px);
+}
+
+.food-image{
+    font-size:80px;
+    padding:30px;
+    background:#fff8f0;
+}
+
+.food-content{
+    padding:25px;
+}
+
+.food-content h3{
+    margin-bottom:10px;
+}
+
+.category{
+    color:#666;
+    font-size:14px;
+}
+
+.price{
+    font-size:26px;
+    font-weight:bold;
+    color:#ff9800;
+    margin:15px 0;
+}
+
+.order-btn{
+    width:100%;
+
+    padding:12px;
+
+    background:#ff9800;
+
+    border:none;
+
+    color:white;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+}
+
+.order-btn:hover{
+    background:#e68900;
+}
+
+.offer-section{
+    background:#ff9800;
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.offer-section h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.offer-section p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+/* ABOUT PAGE */
+
+.about-hero{
+    height:55vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+    ),
+    url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    color:white;
+}
+
+.about-hero-content h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.about-section{
+    padding:100px 50px;
+}
+
+.about-container{
+    display:flex;
+    gap:50px;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.about-text{
+    flex:1;
+}
+
+.about-text h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
+.about-image{
+    flex:1;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:20px;
+}
+
+.about-stats{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+    padding:50px;
+    background:#fff;
+}
+
+.stat-card{
+    text-align:center;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.stat-card h2{
+    color:#ff9800;
+    font-size:40px;
+}
+
+.mission-section{
+    padding:80px 50px;
+
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.mission-card{
+    flex:1;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.chef-section{
+    text-align:center;
+    padding:100px 20px;
+}
+
+.chef-card{
+    max-width:500px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.chef-card img{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:50%;
+    margin-bottom:20px;
+}
+
+.why-choose{
+    padding:100px 50px;
+    text-align:center;
+}
+
+.choose-grid{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+.choose-card{
+    width:300px;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.choose-card h3{
+    margin:15px 0;
+}
+
+/* CONTACT PAGE */
+
+.contact-hero{
+    height:55vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+    ),
+    url("https://images.unsplash.com/photo-1514933651103-005eec06c04b");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    color:white;
+}
+
+.contact-hero-content h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.contact-info{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+
+    padding:80px 40px;
+}
+
+.contact-card{
+    width:300px;
+
+    background:white;
+
+    text-align:center;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+    font-size:24px;
+}
+
+.contact-card h3{
+    margin:15px 0;
+}
+
+.contact-section{
+    padding:80px 20px;
+}
+
+.contact-form-box{
+    max-width:700px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:15px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    font-size:16px;
+}
+
+.contact-form textarea{
+    height:150px;
+    resize:none;
+}
+
+.contact-form button{
+    background:#ff9800;
+
+    color:white;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    font-size:18px;
+
+    cursor:pointer;
+}
+
+.contact-form button:hover{
+    background:#e68900;
+}
+
+.hours-section{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hours-section h2{
+    margin-bottom:25px;
+}
+
+.hours-box{
+    max-width:700px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.hours-box p{
+    margin:12px 0;
+}
+
+.map-section{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.map-box{
+    max-width:1000px;
+    margin:auto;
+}
+
+.map-box iframe{
+    width:100%;
+    height:450px;
+    border-radius:20px;
+}
+
+/* RESERVATION PAGE */
+
+.reservation-hero{
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.65)
+    ),
+    url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:120px 30px;
+}
+
+.reservation-overlay{
+    width:100%;
+    max-width:1300px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.reservation-info{
+    flex:1;
+    color:white;
+}
+
+.reservation-info h1{
+    font-size:65px;
+    margin-bottom:20px;
+}
+
+.reservation-info p{
+    font-size:22px;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+
+.booking-features{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    font-size:18px;
+}
+
+.reservation-box{
+    width:450px;
+
+    background:rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    border-radius:25px;
+
+    padding:35px;
+}
+
+.reservation-box h2{
+    color:white;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.reservation-box .reservation-form input{
+    background:white;
+}
+
+.steps-section{
+    padding:100px 40px;
+    text-align:center;
+}
+
+.steps-section h2{
+    font-size:42px;
+    margin-bottom:50px;
+}
+
+.steps-grid{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.step-card{
+    width:320px;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.step-card h3{
+    margin-bottom:15px;
+}
+
+/* ADMIN DASHBOARD */
+
+.dashboard-header{
+    padding:140px 30px 60px;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)
+    ),
+    url("https://images.unsplash.com/photo-1552566626-52f8b828add9");
+
+    background-size:cover;
+    background-position:center;
+
+    color:white;
+}
+
+.dashboard-header h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.dashboard-header p{
+    font-size:20px;
+}
+
+.dashboard-stats{
+
+    padding:70px 40px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+}
+
+.dashboard-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 20px rgba(0,0,0,0.08);
+
+    transition:0.3s;
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-10px);
+}
+
+.dashboard-card h2{
+
+    font-size:45px;
+
+    color:#ff9800;
+
+    margin-bottom:10px;
+}
+
+.dashboard-card p{
+
+    font-size:18px;
+}
+
+.dashboard-table-section{
+
+    padding:50px;
+}
+
+.dashboard-table-section h2{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    font-size:40px;
+}
+
+.table-container{
+
+    overflow-x:auto;
+}
+
+.admin-table{
+
+    min-width:1000px;
+}
+
+.delete-btn{
+
+    display:inline-block;
+
+    padding:10px 18px;
+
+    background:#dc3545;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    transition:0.3s;
+}
+
+.delete-btn:hover{
+
+    background:#b02a37;
+}
+
+@media(max-width:768px){
+
+    .dashboard-header h1{
+
+        font-size:35px;
+    }
+
+    .dashboard-table-section{
+
+        padding:20px;
+    }
+}
+
+/* FOOD MANAGEMENT PAGE */
+
+.food-header{
+
+    padding:140px 30px 60px;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)
+    ),
+    url("https://images.unsplash.com/photo-1552566626-52f8b828add9");
+
+    background-size:cover;
+    background-position:center;
+
+    color:white;
+}
+
+.food-header h1{
+
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.food-header p{
+
+    font-size:20px;
+}
+
+.food-stats{
+
+    padding:60px 40px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+}
+
+.food-stat-card{
+
+    background:white;
+
+    padding:35px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 20px rgba(0,0,0,0.08);
+}
+
+.food-stat-card h2{
+
+    color:#ff9800;
+    font-size:40px;
+}
+
+.food-form-section{
+
+    padding:20px 30px 60px;
+}
+
+.food-form-box{
+
+    max-width:700px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 20px rgba(0,0,0,0.08);
+}
+
+.food-form-box h2{
+
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.food-form{
+
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.food-form input{
+
+    padding:15px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+}
+
+.food-form button{
+
+    padding:15px;
+
+    border:none;
+
+    background:#ff9800;
+
+    color:white;
+
+    border-radius:10px;
+
+    cursor:pointer;
+}
+
+.food-management-grid{
+
+    padding:40px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+}
+
+.management-food-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 20px rgba(0,0,0,0.08);
+
+    transition:0.3s;
+}
+
+.management-food-card:hover{
+
+    transform:translateY(-10px);
+}
+
+.management-food-icon{
+
+    font-size:70px;
+
+    margin-bottom:20px;
+}
+
+.food-price{
+
+    color:#ff9800;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    margin:15px 0;
+}
+
+.delete-food-btn{
+
+    display:inline-block;
+
+    padding:10px 18px;
+
+    background:#dc3545;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:8px;
+}
+
+.delete-food-btn:hover{
+
+    background:#b02a37;
+}
+
+@media(max-width:768px){
+
+    .food-header h1{
+
+        font-size:35px;
+    }
+
+    .food-management-grid{
+
+        padding:20px;
+    }
+}
+
+/* GALLERY PAGE */
+
+.gallery-hero{
+
+    height:55vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+    ),
+    url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    color:white;
+}
+
+.gallery-hero-content h1{
+
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.gallery-section{
+
+    padding:100px 50px;
+    text-align:center;
+}
+
+.gallery-section h2{
+
+    font-size:40px;
+    margin-bottom:50px;
+}
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:25px;
+}
+
+.gallery-card{
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 20px rgba(0,0,0,0.15);
+
+    transition:0.4s;
+}
+
+.gallery-card:hover{
+
+    transform:scale(1.05);
+}
+
+.gallery-card img{
+
+    width:100%;
+    height:300px;
+    object-fit:cover;
+
+    display:block;
+}

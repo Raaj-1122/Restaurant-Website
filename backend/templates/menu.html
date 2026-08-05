@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu - Tasty Bites</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<nav>
+
+    <div class="logo">
+        🍽 Tasty Bites
+    </div>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/menu">Menu</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/gallery">Gallery</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/reservation">Reservation</a></li>
+        <li><a href="/admin-login">Admin</a></li>
+    </ul>
+
+</nav>
+
+<section class="menu-hero">
+
+    <div class="menu-hero-content">
+
+        <h1>Our Delicious Menu</h1>
+
+        <p>
+            Discover authentic Indian flavors prepared
+            by our expert chefs using fresh ingredients.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="menu-section">
+
+    <h2>Popular Dishes</h2>
+
+    <div class="menu-grid">
+
+        {% for food in foods %}
+
+        <div class="food-card">
+
+            <div class="food-image">
+
+                {% if food[2] == "Main Course" %}
+                🍛
+                {% elif food[2] == "Rice" %}
+                🍚
+                {% elif food[2] == "Bread" %}
+                🫓
+                {% elif food[2] == "Dessert" %}
+                🍨
+                {% elif food[2] == "Beverage" %}
+                🥤
+                {% elif food[2] == "Starter" %}
+                🍗
+                {% else %}
+                🍽️
+                {% endif %}
+
+            </div>
+
+            <div class="food-content">
+
+                <h3>{{ food[1] }}</h3>
+
+                <span class="category">
+                    {{ food[2] }}
+                </span>
+
+                <div class="price">
+                    ₹{{ food[3] }}
+                </div>
+
+                <a href="/order/{{ food[0] }}">
+                    <button class="order-btn">
+                        Order Now
+                    </button>
+                </a>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+<section class="offer-section">
+
+    <h2>🔥 Today's Special Offer</h2>
+
+    <p>
+        Get 20% OFF on orders above ₹1000
+    </p>
+
+    <a href="/reservation">
+        <button class="btn-primary">
+            Book A Table
+        </button>
+    </a>
+
+</section>
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+            <h3>Tasty Bites</h3>
+            <p>Serving happiness one plate at a time.</p>
+        </div>
+
+        <div>
+            <h3>Contact</h3>
+            <p>📞 +91 9876543210</p>
+            <p>✉ info@tastybites.com</p>
+        </div>
+
+        <div>
+            <h3>Address</h3>
+            <p>Greater Noida, Uttar Pradesh</p>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+        © 2026 Tasty Bites Restaurant. All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
